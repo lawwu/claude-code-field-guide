@@ -228,9 +228,12 @@ Deploy $ARGUMENTS to production:
     - `bq`
     - `gcloud`
     - `ffmpeg`
-- One MCP I still like and have configured is the [DeepWiki MCP](https://docs.devin.ai/work-with-devin/deepwiki-mcp)
 - Because CLIs are useful to Claude Code and it's relatively easy to write CLIs now, I have started creating more CLIs when there is some repeated workflow/analysis that I want Claude Code to do. I've liked [Typer](https://typer.tiangolo.com/)
 
+# MCPs I like
+
+- One MCP I still like and have configured is the [DeepWiki MCP](https://docs.devin.ai/work-with-devin/deepwiki-mcp)
+- [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) - really good MCP server for Confluence and Jira. This is an open source Atlassian MCP not maintained by Atlassian. I'm surprised companies don't want to invest in CLIs and MCPs for their own products. If your Jira instance has a lot of custom fields, the MCP is kind of wasteful. mcp-atlassian wraps the [atlassian-python-api](https://github.com/atlassian-api/atlassian-python-api) SDK (which is also not an offiica). Because I prefer CLIs to MCPs now, I like making having Claude Code make direct API calls to Jira and Confluence via the SDK.
 
 # Other Tips
 
@@ -244,21 +247,32 @@ Deploy $ARGUMENTS to production:
 
 - **Add session notifications**: I’ve really enjoyed using [Peon Ping](https://github.com/PeonPing/peon-ping) stars for the last few weeks. It adds a Claude Code hook at the beginning and end of each session. It notifies you with a system notification and a custom sound. The default is a Warcraft III peon. There’s also sounds from Starcaft and Age of Empires and a bunch of other goodies. The sounds are fun but it’s genuinly useful knowing when the agent finishes it’s task. It initially was for Claude Code but they’ve recently added support for most coding agents now. ([Day 12 Tip](https://lawwu.github.io/posts/2026-02-11-claude-code-agentic-coding/#day-12-setup-peonping))
 
+# Current Agentic Coding Stack
+
+- Harness: Claude Code TUI
+- Models: Claude Opus 4.6 200k 
+- Skills / Plugins
+    - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
+    - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
+- iTerm2
+- [Claude Code Github Action](https://github.com/anthropics/claude-code-action)
+- [Obsidian](https://obsidian.md/) - I used to use Workflowy as a [PKM](https://en.wikipedia.org/wiki/Personal_knowledge_management) but switched to Obsidian because it was markdown based and hence more AI-friendly. 
+- OpenClaw
 
 # Things I'm currently experimenting with
 
 - [theorist](https://github.com/blader/theorist) skill to keep a `THEORY.md` up to date.
-
+- [cmux](https://github.com/manaflow-ai/cmux) - ghostty based Claude Code terminal
 
 # Things I'd like to try
 
-- `/remote-control`
+- `/remote-control` - got access 2026-03-03 but failed the first time I tried it
 - [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
 - `/batch` and `/simplify` - [source](https://x.com/bcherny/status/2027534984534544489)
 
-
 # Things I've Stopped Doing
 
+- Using as many MCP servers
 - Generating CLAUDE.md/AGENTS.md using `/init`
 
 # Sources of information
