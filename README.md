@@ -2,8 +2,7 @@
 
 Documenting current best practices when using Claude Code. I've [been using Claude Code regularly since July 2025](https://lawwu.github.io/posts/2025-07-18-starting-to-use-claude-code/). Remember best practices vary quite a bit based on how you use Claude Code, your use case, your experiences and your technical ability. Feel free to use what is useful.
 
-I originally had this sorted in order of importance but decided to map it according to how Claude Code organizes it's [docs](https://code.claude.com/docs/en/how-claude-code-works). 
-This is changing fast so I have stopped doing certain things.
+I originally had this sorted in order of importance but decided to map it according to how Claude Code organizes it's [docs](https://code.claude.com/docs/en/how-claude-code-works).
 
 
 # [Core Concepts - How Claude Code Works](https://code.claude.com/docs/en/how-claude-code-works)
@@ -28,7 +27,7 @@ This is changing fast so I have stopped doing certain things.
 You can access Claude Code through:
 - [desktop app](https://code.claude.com/docs/en/desktop)
 - [IDE extensions](https://code.claude.com/docs/en/ide-integrations)
-- web interface at [claude.ai/code]
+- web interface at [claude.ai/code](https://claude.ai/code)
 - [Remote Control](https://code.claude.com/docs/en/remote-control)
 - [Slack](https://code.claude.com/docs/en/slack)
 - CI/CD pipelines as a [Github Action](https://code.claude.com/docs/en/github-actions)
@@ -125,10 +124,11 @@ So you're `CLAUDE.md` will look like:
 @AGENTS.md
 ```
 
+You can run `/memory` to see this being respected as well as the other directories memory is being loaded from:
+
 ![](./images/cc_day2_agents_md.png)
 
 - See this [memory](https://code.claude.com/docs/en/memory) page for more details on how Claude Code handles memory files. You can place your CLAUDE.md files in a project, globally for a user or globally for a company. You can divide your CLAUDE.md into separate [rules](https://code.claude.com/docs/en/memory#organize-rules-with-claude%2Frules%2F) files. But note these are all loaded at launch with the same priority as CLAUDE.md.
-- You can run `/memory` to see the order of 
 
 
 - **Use auto memory deliberately**: Project memory compounds across sessions, but the `MEMORY.md` entrypoint should stay concise and well-organized. ([Day 4 Tip](https://lawwu.github.io/posts/2026-02-11-claude-code-agentic-coding/#day-4---auto-memory))
