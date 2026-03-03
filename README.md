@@ -223,6 +223,11 @@ Deploy $ARGUMENTS to production:
 # CLIs I like
 
 - I **prefer CLIs to MCPs**: The Bash tool plus mature CLIs is often more efficient, more debuggable, and lighter on context than loading many MCP servers. ([Day 7 Tip](https://lawwu.github.io/posts/2026-02-11-claude-code-agentic-coding/#day-7---prefer-clis-to-mcps))
+- I much prefer the `gh` CLI to the Github MCP server. Other CLIs I've found useful are:
+    - `uv`
+    - `bq`
+    - `gcloud`
+    - `ffmpeg`
 - One MCP I still like and have configured is the [DeepWiki MCP](https://docs.devin.ai/work-with-devin/deepwiki-mcp)
 - Because CLIs are useful to Claude Code and it's relatively easy to write CLIs now, I have started creating more CLIs when there is some repeated workflow/analysis that I want Claude Code to do. I've liked [Typer](https://typer.tiangolo.com/)
 
