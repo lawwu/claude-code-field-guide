@@ -220,7 +220,7 @@ Deploy $ARGUMENTS to production:
 - [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
 
 
-## Things I've Stopped Doing
+# Things I've Stopped Doing
 
 - Generating CLAUDE.md/AGENTS.md using `/init`
 
