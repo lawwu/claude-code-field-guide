@@ -217,7 +217,9 @@ Deploy $ARGUMENTS to production:
 
 # Things I'd like to try
 
+- `/remote-control`
 - [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
+- `/batch` and `/simplify` - [source](https://x.com/bcherny/status/2027534984534544489)
 
 
 # Things I've Stopped Doing
