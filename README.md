@@ -4,6 +4,32 @@ Documenting current best practices when using Claude Code. I've [been using Clau
 
 I originally had this sorted in order of importance but decided to map it according to how Claude Code organizes it's [docs](https://code.claude.com/docs/en/how-claude-code-works).
 
+# Current Agentic Coding Stack
+
+- Harness: Claude Code TUI, 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code
+- Models: Claude Opus 4.6 200k
+- Skills / Plugins
+    - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
+    - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
+- [Claude Code Github Action](https://github.com/anthropics/claude-code-action)
+- [Obsidian](https://obsidian.md/) - I used to use Workflowy as a [PKM](https://en.wikipedia.org/wiki/Personal_knowledge_management) but switched to Obsidian because it was markdown based and hence more AI-friendly. Claude Code can have it's own PKM.
+- OpenClaw
+
+# Things I'm currently experimenting with
+
+- [theorist](https://github.com/blader/theorist) skill to keep a `THEORY.md` up to date.
+- [cmux](https://github.com/manaflow-ai/cmux) - ghostty based Claude Code terminal
+
+# Things I'd like to try
+
+- `/remote-control` - got access 2026-03-03 but failed the first time I tried it
+- [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
+- `/batch` and `/simplify` - [source](https://x.com/bcherny/status/2027534984534544489)
+
+# Things I've Stopped Doing
+
+- Using as many MCP servers
+- Generating CLAUDE.md/AGENTS.md using `/init`
 
 # [Core Concepts - How Claude Code Works](https://code.claude.com/docs/en/how-claude-code-works)
 
@@ -247,41 +273,12 @@ Deploy $ARGUMENTS to production:
 
 - **Add session notifications**: I’ve really enjoyed using [Peon Ping](https://github.com/PeonPing/peon-ping) stars for the last few weeks. It adds a Claude Code hook at the beginning and end of each session. It notifies you with a system notification and a custom sound. The default is a Warcraft III peon. There’s also sounds from Starcaft and Age of Empires and a bunch of other goodies. The sounds are fun but it’s genuinly useful knowing when the agent finishes it’s task. It initially was for Claude Code but they’ve recently added support for most coding agents now. ([Day 12 Tip](https://lawwu.github.io/posts/2026-02-11-claude-code-agentic-coding/#day-12-setup-peonping))
 
-# Current Agentic Coding Stack
-
-- Harness: Claude Code TUI
-- Models: Claude Opus 4.6 200k 
-- Skills / Plugins
-    - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
-    - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
-- 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code
-- [Claude Code Github Action](https://github.com/anthropics/claude-code-action)
-- [Obsidian](https://obsidian.md/) - I used to use Workflowy as a [PKM](https://en.wikipedia.org/wiki/Personal_knowledge_management) but switched to Obsidian because it was markdown based and hence more AI-friendly. 
-- OpenClaw
-
-# Things I'm currently experimenting with
-
-- [theorist](https://github.com/blader/theorist) skill to keep a `THEORY.md` up to date.
-- [cmux](https://github.com/manaflow-ai/cmux) - ghostty based Claude Code terminal
-
-# Things I'd like to try
-
-- `/remote-control` - got access 2026-03-03 but failed the first time I tried it
-- [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
-- `/batch` and `/simplify` - [source](https://x.com/bcherny/status/2027534984534544489)
-
-# Things I've Stopped Doing
-
-- Using as many MCP servers
-- Generating CLAUDE.md/AGENTS.md using `/init`
-
 # Sources of information
 
 - [Claude Code Docs](https://code.claude.com/docs)
-- [Boris Cherny on X](https://x.com/bcherny)
 - [Simon Willison](https://simonwillison.net/) - I like his [RSS feed](https://simonwillison.net/atom/everything/)
+- [HackerNews](https://news.ycombinator.com/)
 - [Karpathy on X](https://x.com/karpathy)
-- [Thariq on X](https://x.com/trq212)
-- [Lance Martin on X](https://x.com/RLanceMartin)
+- Claude Code team: [Boris Cherny](https://x.com/bcherny), [Thariq](https://x.com/trq212), [Lance Martin](https://x.com/RLanceMartin), [Cat Wu](https://x.com/_catwu)
 - [Latent Space](https://www.latent.space/)
-- [Cat Wu on X](https://x.com/_catwu)
+- [Other AI Resources](https://lawwu.github.io/ai_resources.html)
