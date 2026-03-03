@@ -152,12 +152,40 @@ You can run `/memory` to see this being respected as well as the other directori
 - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
 - [`/find-skills`](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) - skill from Vercel to help you find skills
 - Plugins are a way to package up skills and share them
-- Some of my favorite plugins are from Anthropic: [claude-plugins-official](https://github.com/anthropics/claude-plugins-official), [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) and [claude-code-plugins](https://github.com/anthropics/claude-code/tree/main/plugins). Some of the ones I've used are:
+- Some of my favorite plugins and marketplaces are from Anthropic: [Official Anthropic Marketplace](https://github.com/anthropics/claude-plugins-official), [Knowledge Work Plugins](https://github.com/anthropics/knowledge-work-plugins), [skills](https://github.com/anthropics/skills), and [claude-code-plugins](https://github.com/anthropics/claude-code/tree/main/plugins). Some of the ones I've used are:
     - [`/skill-creator`](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/skill-creator/skills/skill-creator/SKILL.md)
     - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
     - [plugin-dev plugin](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev)
     - [explanatory-output-style plugin](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/explanatory-output-style)
     - [data plugin](https://github.com/anthropics/knowledge-work-plugins/tree/main/data) - I found the meta-skill [`/data-context-extractor`](https://github.com/anthropics/knowledge-work-plugins/blob/main/data/skills/data-context-extractor/SKILL.md) quite inspiring
+
+To install:
+
+```bash
+claude plugin marketplace add anthropics/skills
+claude plugin marketplace add anthropics/claude-code
+claude plugin marketplace add anthropics/knowledge-work-plugins
+
+# Then install a specific plugin
+claude plugin install data@knowledge-work-plugins
+```
+
+The official Anthropic marketplace is installed already and automatically upated. Other plugins you will have to manually update the marketplace and plugins:
+
+```bash
+claude marketplace update marketplace-name
+claude plugin update plugin@marketplace-name
+
+claude plugin install plugin@marketplace-name
+claude plugin uninstall plugin@marketplace-name
+```
+
+You can have Claude Code auto update marketplaces by running `/plugin`, selecting your marketplace and selecting enable auto-update. You can also set this variable to enable plugins to auto-update.
+
+```
+export FORCE_AUTOUPDATE_PLUGINS=true
+```
+
 - I also found Kieran Klaassen's [compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) quite inspring. It offers 4 commands for to go through this workflow:
 
 ```
@@ -171,8 +199,10 @@ Plan → Work → Review → Compound → Repeat
 | `/ce:review` | Multi-agent code review before merging |
 | `/ce:compound` | Document learnings to make future work easier |
 
-
-- Marketplaces are a way to host a bunch of plugins, e.g. internally in your company
+- I prefer to install marketplace and plugins with `claude` instead of `/plugin` and navigating the TUI which is kind of clunky using commands like `claude plugin` and `claude marketplace`.
+- [Marketplaces](https://code.claude.com/docs/en/discover-plugins) are a way to host a bunch of plugins, e.g. internally in your company. I recommend your company create an internal skills repo where you can begin hosting plugins/skills that are scoped either for the whole company or a team.
+- Skills are an [open standard](https://agentskills.io/home) that most agents now support. Note the YAML frontmatter is different for each. For example Claude Code Skills have `disable-model-invocation` but it's not part of the open standard.
+- Vercel has created `skill.sh`, an open marketplace of skills along with a useful CLI `npx skills`.
 - Slash commands and skills used to be distinct things but they have since been combined. There is no reason to create commands anymore. You can create a skill that functions like a command with the `disable-model-invocation` field set to true:
 
 ```yaml
