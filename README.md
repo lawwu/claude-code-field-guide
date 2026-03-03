@@ -254,7 +254,7 @@ Deploy $ARGUMENTS to production:
 - Skills / Plugins
     - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
     - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
-- iTerm2
+- 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code
 - [Claude Code Github Action](https://github.com/anthropics/claude-code-action)
 - [Obsidian](https://obsidian.md/) - I used to use Workflowy as a [PKM](https://en.wikipedia.org/wiki/Personal_knowledge_management) but switched to Obsidian because it was markdown based and hence more AI-friendly. 
 - OpenClaw
