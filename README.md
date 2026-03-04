@@ -6,18 +6,18 @@ I originally had this sorted in order of importance but decided to map it accord
 
 # Current Agentic Coding Stack
 
-- Harness: Claude Code TUI, 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code
-- Models: Claude Opus 4.6 200k
+- Harness: [Claude Code](https://code.claude.com/docs/en/quickstart) TUI, 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code
+- Models: [Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6) 200k context window version
 - Skills / Plugins
     - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
     - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
-- [Claude Code Github Action](https://github.com/anthropics/claude-code-action)
+- [Claude Code Github Action](https://github.com/anthropics/claude-code-action) for PR Reviews, small features, skill reviews
 - [Obsidian](https://obsidian.md/) - I used to use Workflowy as a [PKM](https://en.wikipedia.org/wiki/Personal_knowledge_management) but switched to Obsidian because it was markdown based and hence more AI-friendly. Claude Code can have it's own PKM.
-- OpenClaw
+- [OpenClaw](https://github.com/openclaw/openclaw)
 
 # Things I'm currently experimenting with
 
-- [theorist](https://github.com/blader/theorist) skill to keep a `THEORY.md` up to date.
+- [theorist](https://github.com/blader/theorist) skill to keep a per-repo narrative document called `THEORY.md` up to date.
 - [cmux](https://github.com/manaflow-ai/cmux) - ghostty based Claude Code terminal
 
 # Things I'd like to try
