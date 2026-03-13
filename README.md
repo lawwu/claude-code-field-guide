@@ -17,11 +17,15 @@ I originally had this sorted in order of importance but decided to map it accord
 
 # Things I'm currently experimenting with
 
-- [theorist](https://github.com/blader/theorist) skill to keep a per-repo narrative document called `THEORY.md` up to date.
 - [cmux](https://github.com/manaflow-ai/cmux) - ghostty based Claude Code terminal
 
 # Things I'd like to try
 
+- `/voice` - voice mode, this is not transcribing text
+- [Cat Wu's favorite commands](https://x.com/_catwu/status/2032499411230785661)
+    - `!` prefix runs bash inline. the command + output land in context
+    - `ctrl+s` stashes your draft. type something else, submit, and it pops back
+    - `ctrl+g` opens the prompt (or plan) in $EDITOR for bigger edits
 - `/remote-control` - got access 2026-03-03 but failed the first time I tried it
 - [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
 - `/batch` and `/simplify` - [source](https://x.com/bcherny/status/2027534984534544489)
@@ -184,6 +188,7 @@ You can run `/memory` to see this being respected as well as the other directori
     - [plugin-dev plugin](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev)
     - [explanatory-output-style plugin](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/explanatory-output-style)
     - [data plugin](https://github.com/anthropics/knowledge-work-plugins/tree/main/data) - I found the meta-skill [`/data-context-extractor`](https://github.com/anthropics/knowledge-work-plugins/blob/main/data/skills/data-context-extractor/SKILL.md) quite inspiring
+    - You can use this [skills-marketplace](https://github.com/lawwu/skills-marketplace) template to create a skills repo for your organization or company
 
 To install:
 
@@ -263,6 +268,7 @@ Deploy $ARGUMENTS to production:
 
 # Other Tips
 
+- [theorist](https://github.com/blader/theorist) skill to keep a per-repo narrative document called `THEORY.md` up to date. It's useful just have a `THEORY.md` to force you and your team to think about things from a higher-level even if the `theorist` skill doesn't trigger that much automatically.
 - **Don't outpace your understanding**: Review plans, read diffs, and make sure you understand the system well enough to validate what the agent changed. ([Day 14 Tip](https://lawwu.github.io/posts/2026-02-11-claude-code-agentic-coding/#day-14-dont-outpace-your-understanding))
 - I'm trying to regularly re-think is this the optimal way to do things? How should my code, docs and data be organized to be agent-first? OpenAI's [harness engineering post](https://openai.com/index/harness-engineering/) is very good.
 - See these official docs for [common workflows](https://code.claude.com/docs/en/common-workflows) and [best practices](https://code.claude.com/docs/en/best-practices)
