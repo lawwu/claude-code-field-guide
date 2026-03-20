@@ -21,6 +21,7 @@ I originally had this sorted in order of importance but decided to map it accord
 
 # Things I'd like to try
 
+- [Channels](https://code.claude.com/docs/en/channels) (OpenClaw like feature): 
 - `/voice` - voice mode, this is not transcribing text
 - [Cat Wu's favorite commands](https://x.com/_catwu/status/2032499411230785661)
     - `!` prefix runs bash inline. the command + output land in context
@@ -182,7 +183,13 @@ You can run `/memory` to see this being respected as well as the other directori
 - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
 - [`/find-skills`](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) - skill from Vercel to help you find skills
 - Plugins are a way to package up skills and share them
-- Some of my favorite plugins and marketplaces are from Anthropic: [Official Anthropic Marketplace](https://github.com/anthropics/claude-plugins-official), [Knowledge Work Plugins](https://github.com/anthropics/knowledge-work-plugins), [skills](https://github.com/anthropics/skills), and [claude-code-plugins](https://github.com/anthropics/claude-code/tree/main/plugins). Some of the ones I've used are:
+- Some of my favorite plugins and marketplaces are from Anthropic: 
+    - [Official Anthropic Marketplace](https://github.com/anthropics/claude-plugins-official)
+    - [Knowledge Work Plugins](https://github.com/anthropics/knowledge-work-plugins)
+    - [Financial Services Plugins](https://github.com/anthropics/financial-services-plugins)
+    - [skills](https://github.com/anthropics/skills)
+    - [claude-code-plugins](https://github.com/anthropics/claude-code/tree/main/plugins)
+Some of the ones I've used are:
     - [`/skill-creator`](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/skill-creator/skills/skill-creator/SKILL.md)
     - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
     - [plugin-dev plugin](https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev)
