@@ -6,7 +6,10 @@ I originally had this sorted in order of importance but decided to map it accord
 
 # Current Agentic Coding Stack
 
-- Harness: [Claude Code](https://code.claude.com/docs/en/quickstart) TUI, 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code though I like to use [Codex](https://github.com/openai/codex) to review Claude's output
+- Harness: 
+    - [Claude Code](https://code.claude.com/docs/en/quickstart) TUI, 60% in iTerm2, 40% in the VS Code Terminal (not the IDE Extension) for situations where I want to understand the code though. 
+    - [Claude Cowork](https://www.anthropic.com/product/claude-cowork) for non-coding tasks like making videos. This is the [first one I made](https://lawrencewu.net/posts/2026-03-18-brisket-breakdown/) where default Cowork just uses Python and `ffmpeg`. But I learned about [remotion](https://github.com/remotion-dev/remotion) and have successfully used it to make travel recap videos for my family.
+    - I like to use [Codex](https://github.com/openai/codex) to review Claude's output
 - Models: [Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6) 200k context window version
 - Skills / Plugins
     - [autoresearch](https://github.com/karpathy/autoresearch) - truly an amazing killer app for Claude code, [wrote a post about it](https://lawrencewu.net/posts/2026-03-27-autoresearch-cc-killer-app/). It runs as automated machine learning research on a VM.
