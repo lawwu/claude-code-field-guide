@@ -11,6 +11,7 @@ I originally had this sorted in order of importance but decided to map it accord
 - Skills / Plugins
     - [autoresearch](https://github.com/karpathy/autoresearch) - truly an amazing killer app for Claude code, [wrote a post about it](https://lawrencewu.net/posts/2026-03-27-autoresearch-cc-killer-app/). It runs as automated machine learning research on a VM.
     - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
+    - [agentic-ml-plugin](https://github.com/lawwu/agentic-ml-plugin)
     - [`/commit-commands`](https://github.com/anthropics/claude-code/blob/main/plugins/commit-commands/README.md)
 - [Claude Code Github Action](https://github.com/anthropics/claude-code-action) for PR Reviews, small features, skill reviews
 - [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper) - for voice to text prompting
