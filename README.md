@@ -11,6 +11,8 @@ I originally had this sorted in order of importance but decided to map it accord
     - [Claude Cowork](https://www.anthropic.com/product/claude-cowork) for non-coding tasks like making videos. This is the [first one I made](https://lawrencewu.net/posts/2026-03-18-brisket-breakdown/) where default Cowork just uses Python and `ffmpeg`. But I learned about [remotion](https://github.com/remotion-dev/remotion) and have successfully used it to make travel recap videos for my family.
     - I like to use [Codex](https://github.com/openai/codex) to review Claude's output
 - Models: [Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6) 200k context window version
+- Planning:
+    - I liked to use Claude's plan mode for medium-larger projects but Matt Pocock's [`/grill-me`](https://github.com/mattpocock/skills/blob/main/grill-me/SKILL.md) skill is better. It asks you more questions.
 - Skills / Plugins
     - [autoresearch](https://github.com/karpathy/autoresearch) - truly an amazing killer app for Claude code, [wrote a post about it](https://lawrencewu.net/posts/2026-03-27-autoresearch-cc-killer-app/). It runs as automated machine learning research on a VM.
     - [`/skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) - a meta-skill from Anthropic that helps you create skills. I love how there is a built-in flow for creating a evaluation pipeline (create eval data, run the skill vs. non-skill workflow, gather feedback and iterate). Note there is Cowork and Claude.ai specific content that can be removed if you do not use those interfaces.
@@ -21,21 +23,16 @@ I originally had this sorted in order of importance but decided to map it accord
 - [Obsidian](https://obsidian.md/) - I used to use Workflowy as a [PKM](https://en.wikipedia.org/wiki/Personal_knowledge_management) but switched to Obsidian because it was markdown based and hence more AI-friendly. Claude Code can have it's own PKM.
 - [OpenClaw](https://github.com/openclaw/openclaw)
 
-# Things I'm currently experimenting with
-
-- [cmux](https://github.com/manaflow-ai/cmux) - ghostty based Claude Code terminal
-
 # Things I'd like to try
 
+- [/write-a-prd, /prd-to-issues](https://x.com/mattpocockuk/status/2040054706928578851) - after finding out /grill-me was useful
 - [Channels](https://code.claude.com/docs/en/channels) (OpenClaw like feature): 
 - `/voice` - voice mode, this is not transcribing text
 - [Cat Wu's favorite commands](https://x.com/_catwu/status/2032499411230785661)
     - `!` prefix runs bash inline. the command + output land in context
     - `ctrl+s` stashes your draft. type something else, submit, and it pops back
     - `ctrl+g` opens the prompt (or plan) in $EDITOR for bigger edits
-- `/remote-control` - got access 2026-03-03 but failed the first time I tried it
 - [`/adversarial-review`](https://skills.sh/poteto/noodle/adversarial-review)
-- `/batch` and `/simplify` - [source](https://x.com/bcherny/status/2027534984534544489)
 
 # Things I've Stopped Doing
 
