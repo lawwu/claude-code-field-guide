@@ -25,6 +25,7 @@ I originally had this sorted in order of importance but decided to map it accord
 
 # Things I'd like to try
 
+- [caveman](https://github.com/JuliusBrussee/caveman)
 - [/write-a-prd, /prd-to-issues](https://x.com/mattpocockuk/status/2040054706928578851) - after finding out /grill-me was useful
 - [Channels](https://code.claude.com/docs/en/channels) (OpenClaw like feature): 
 - `/voice` - voice mode, this is not transcribing text
